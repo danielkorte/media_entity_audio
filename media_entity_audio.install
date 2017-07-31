@@ -13,3 +13,10 @@ function media_entity_audio_install() {
   $destination = \Drupal::config('media_entity.settings')->get('icon_base');
   media_entity_copy_icons($source, $destination);
 }
+
+/**
+ * Reinstall default audio icon.
+ */
+function media_entity_audio_update_8001() {
+  media_entity_audio_install();
+}
